@@ -2,39 +2,80 @@
 <html>
     <head>
         <link rel="stylesheet" href="survey.css">
+        <title>Film Interest</title>
     </head>
     <body>
-        <h1 id="title">Survey</h1>
-        <p id="description">Let us know what you think!</p>
+        <h1 id="title">Film Interest Survey</h1>
+        <p id="description">What are your favorites?</p>
         <form id="survey-form">
 
-            <!-- Name -->
-            <div class="form-group">
-                <label for="name" id="name-label">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
+            <!-- Genre Selection (checkbox)-->
+            <section class="form-group">
+                <h2>Choose Your Favorite Genres:</h2>
+                <input type="checkbox" id="genre1" name="genre1" value="comedy">
+                <label for="genre1">Comedy</label>
+                <br>
+                <input type="checkbox" id="genre2" name="genre2" value="drama">
+                <label for="genre2">Drama</label>
+                <br>
+                <input type="checkbox" id="genre3" name="genre3" value="action">
+                <label for="genre3">Action / Adventure</label>
+                <br>
+                <input type="checkbox" id="genre4" name="genre4" value="romance">
+                <label for="genre4">Romance</label>
+                <br>
+                <input type="checkbox" id="genre5" name="genre5" value="thriller">
+                <label for="genre5">Crime / Mystery / Thriller</label>
+            </section>
 
-            <!-- Email -->
-            <div class="form-group">
-                <label for="email" id="email-label">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email Address" required>
-            </div>
+            <!-- (dropdown)-->
+            <section class="form-group">
+                <h2>Something Dropdown</h2>
+                <label>
 
-            <!-- Score -->
-            <div class="form-group">
-                <label for="number" id="number-label">Rate Our Service (1 to 10)</label>
-                <input type="number" id="number" name="number" min="1" max="10" placeholder="5">
-            </div>
+                </label>
+            </section>
+
+            <!-- Favorite Director (radio)-->
+            <section class="form-group">
+                <label for="director">Choose a favorite among these directors:</label>
+                <select name="director" id="dropdown">
+                    <option value="hitchcock">Alfred Hitchcock</option>
+                    <option value="welles">Orson Welles</option>
+                    <option value="spielberg">Steven Spielberg</option>
+                    <option value="bresson">Robert Bresson</option>
+                </select>
+            </section>
+
+            <!-- Film Eras -->
+            <section class="form-group">
+                <h2>Film Eras</h2>
+                <label for="number" id="number-label">Which decade of film history most insterests you?</label>
+                <input type="number" id="number" name="number" min="1910" max="2020" step="10" placeholder="1910">
+            </section>
 
             <!-- Comment -->
-            <div class="form-group">
+            <section class="form-group">
+                <label for="comments" id="comments">Please Leave Comments Below:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </section>
 
-            </div>
+            <!-- Name -->
+            <section class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </section>
+
+            <!-- Email -->
+            <section class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </section>
 
             <!-- Submit Button -->
-            <div class="form-group">
+            <section class="form-group">
                 <button type="submit" id="submit" class="submit-button">Submit</button>
-            </div>
+            </section>
 
         </form>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
